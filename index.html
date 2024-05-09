@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function validateLogin() {
+            var registerNumber = document.getElementById("register-number").value;
+            var password = document.getElementById("password").value;
+
+            if (registerNumber === "RA221102050108" && password === "aravind") {
+                window.location.href = "student1.html";
+            } else if (registerNumber === "RA221102050114" && password === "bala") {
+                window.location.href = "student2.html";
+            } else if (registerNumber === "RA221102050097" && password === "Navin") {
+                window.location.href = "student3.html";
+            } else {
+                alert("Invalid registration number or password");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="login-form">
+            <label for="register-number">Register Number:</label>
+            <input type="text" id="register-number" name="register-number">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <button onclick="validateLogin()">Login</button>
+        </div>
+    </div>
+</body>
+</html>
